@@ -90,19 +90,39 @@
         .button:hover:before {
             left: 100%;
         }
+        .install-links {
+            margin-top: 50px;
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: auto;
+            max-width: 800px;
+        }
+        .resource-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .resource-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .resource-item a {
+            font-size: 1.5rem;
+            color: #ff7e5f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .resource-item a:hover {
+            color: #feb47b;
+        }
         footer {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
             color: white;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            color: #ff7e5f;
         }
         @media (max-width: 768px) {
             h1 {
@@ -122,9 +142,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#features">Features / 기능</a></li>
+                <li><a href="#download">Download / 다운로드</a></li>
+                <li><a href="#resources">Resources / 리소스</a></li>
+                <li><a href="#install-links">Install Links / 설치 링크</a></li>
+                <li><a href="#contact">Contact Us / 문의</a></li>
             </ul>
         </nav>
     </header>
@@ -135,29 +157,40 @@
         <a href="https://appbox.me/xxbkixji" class="button">Download and Install Spoofer 343.0</a>
     </section>
 
-    <section id="features">
-        <h2>Why Choose Spoofer?</h2>
-        <ul style="text-align: left; font-size: 1.2rem; line-height: 1.8; margin: auto; max-width: 800px;">
-            <li>Seamless teleportation in Pokémon GO</li>
-            <li>Enhanced gameplay with advanced features</li>
-            <li>Regular updates for the latest versions</li>
-            <li>Trusted by thousands of users worldwide</li>
-        </ul>
+    <section id="resources">
+        <h2>Resources / 리소스</h2>
+        <div class="resource-list">
+            <div class="resource-item">
+                <a href="https://www.pgsharp-info.com/">POGOGG 오피셜 웹사이트</a>
+                <p>최신 정보를 제공받고 스푸퍼에 대해 알아보세요.</p>
+            </div>
+            <div class="resource-item">
+                <a href="https://www.pgsharp-info.com/bbs/board.php?bo_table=test_note&wr_id=1355&sca=GPS%EA%B0%80%EC%9D%B4%EB%93%9C">POGOGG 스푸퍼 기능 정리</a>
+                <p>스푸퍼의 다양한 기능과 활용법을 확인하세요.</p>
+            </div>
+            <div class="resource-item">
+                <a href="https://www.youtube.com/channel/UC4SjSdQsj_7TaSGggLZEufw">POGOGG 유튜브 채널</a>
+                <p>비디오 튜토리얼과 최신 업데이트를 확인해보세요.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="reviews">
-        <h2>What Our Users Say</h2>
-        <blockquote style="font-style: italic; margin: 20px auto; max-width: 800px;">"The best tool for Pokémon GO I've ever used! It's reliable and feature-packed." - Jane D.</blockquote>
-        <blockquote style="font-style: italic; margin: 20px auto; max-width: 800px;">"I've recommended Spoofer to all my friends. It’s just amazing!" - John K.</blockquote>
+    <section id="install-links">
+        <h2>Install Links / 설치 링크</h2>
+        <p class="install-links">
+            <a href="#">[Link Placeholder 1] - Description here</a><br>
+            <a href="#">[Link Placeholder 2] - Description here</a><br>
+            <a href="#">[Link Placeholder 3] - Description here</a>
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us / 문의</h2>
+        <p>Email: <a href="mailto:pogosupply@gmail.com">pogosupply@gmail.com</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 POGOGG - Enhance Your Pokémon GO Experience!</p>
-        <div>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-        </div>
     </footer>
 </body>
 </html>
