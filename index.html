@@ -137,15 +137,20 @@
             const udid = document.getElementById("udid").value;
             const responseMessage = document.getElementById("responseMessage");
 
-            const response = await fetch("http://localhost:3000/submit-udid", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ nickname, udid })
-            });
+            try {
+                const response = await fetch("https://udid-server.onrender.com/submit-udid", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nickname, udid })
+                });
 
-            const result = await response.json();
-            responseMessage.textContent = result.message;
-            responseMessage.style.color = result.message.includes("성공") ? "green" : "red";
+                const result = await response.json();
+                responseMessage.textContent = result.message;
+                responseMessage.style.color = result.message.includes("성공") ? "green" : "red";
+            } catch (error) {
+                responseMessage.textContent = "서버 오류 발생. 다시 시도해주세요.";
+                responseMessage.style.color = "red";
+            }
         });
     </script>
 </body>
